@@ -1,0 +1,36 @@
+<!--pages/canvas/canvas.wxml-->
+<view class='box'>
+  <view class='content' id='canvas-box'>
+    <canvas 
+      class='canvas' 
+      style="height:{{canvasHeight}}px;width:{{canvasWeight}}px" 
+      canvas-id='scene'
+      catchtouchstart='onTouchStart'
+      catchtouchmove='onTouchMove'
+      catchtouchend='onTouchEnd'
+    />
+  </view>
+  <view class='template'>
+    <swiper 
+      display-multiple-items='5' 
+      circular>
+      <block wx:for="{{template}}" wx:key="id">
+        <swiper-item>
+          <view wx:if="{{!item.add}}" class='img-box'>
+            <image src='{{item.img}}' mode='aspectFit' bindtap='onCheckTemplate' data-index="{{index}}"></image>
+            <view wx:if="{{checkIndex == index}}" class='mongolia'>
+              <image src='./../../images/check.png' style='position: absolute;right:10rpx;bottom:10rpx;width: 40rpx;height:40rpx;'></image>
+            </view>
+          </view>
+          <view wx:else class='img-box add-box'>
+            <image src='{{item.img}}' class='add-icon' mode='aspectFit' bindtap='addTemplateImg'></image>
+            <text class='add-tips'>自定义图片</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view style='background-color: #fff;'>
+    <button class='save-btn btn' bindtap='goSaveTap'>保存图片</button>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+/* pages/canvas/canvas.wxss */
+page {
+  background-color: #f4f5f7;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.box .content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .template {
+  flex: 0 0 180rpx;
+  margin-top: 10rpx;
+  height: 180rpx;
+  text-align: center;
+}
+.box .template swiper {
+  height: 180rpx;
+  background-color: #fff;
+}
+.box .img-box {
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.box .template image, .box .img-box {
+  width: 100%;
+  height: 100%;
+}
+
+.img-box.add-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box .template image.add-icon {
+  width: 70%;
+  height: 70%;
+}
+.box .template .add-tips {
+  font-size: 22rpx;
+}
+
+.mongolia {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3)
+}
+
+
+.box .save-btn {
+  flex: 0 0 90rpx;
+  margin: 10rpx;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}

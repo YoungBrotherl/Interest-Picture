@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class='title'>随心趣味图</view>
+<view class='ul'>
+  <view class='li'>
+    <text class='num'>1</text>
+    <text class='text'>上传照片</text>
+  </view>
+  <view class='li'>
+    <text class='num'>2</text>
+    <text class='text'>选择模板、拼接图片</text>
+  </view>
+  <view class='li'>
+    <text class='num'>3</text>
+    <text class='text'>保存图片并分享</text>
+  </view>
+</view>
+
+<button class='upload-btn btn' bindtap='goCanvasTap'>上传照片</button>
+
+<image src='./../../images/bg.png' class='bg-img'></image>
